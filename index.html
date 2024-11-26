@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บอกรักแฟน</title>
+    <!-- เชื่อมโยงไฟล์ CSS -->
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <h1>เป็นกำลังใจให้เสมอนะ ❤️</h1>
+    <p>เปาก็เป็นกำลังใจให้ด้วยไม่เชื่อดูหน้าเปาสิ</p>
+    <!-- รูปภาพที่ย่อขนาด -->
+    <img src="Pao.jpg" alt="แมวอ้วง">
+    
+    <audio id="loveSong" autoplay loop muted>
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        window.onload = () => {
+            const loveSong = document.getElementById('loveSong');
+            loveSong.muted = false; // ปิด mute หลังจากโหลดหน้า
+            loveSong.play();
+        };
+    </script>
+    
+    <button id="playButton">แตะที่นี่เพื่อเล่นเพลง</button>
+    <script>
+        const playButton = document.getElementById('playButton');
+        const loveSong = document.getElementById('loveSong');
+    
+        playButton.addEventListener('click', () => {
+            loveSong.play();
+            playButton.style.display = 'none'; // ซ่อนปุ่มหลังจากกด
+        });
+    </script>
+    
+    <script>
+        const loveSong = document.getElementById('loveSong');
+
+        // ตรวจสอบว่าเบราว์เซอร์บล็อค autoplay หรือไม่
+        document.addEventListener('DOMContentLoaded', () => {
+            loveSong.play().catch(error => {
+                console.warn('Autoplay ถูกบล็อค: โปรดโต้ตอบกับหน้าเว็บเพื่อเล่นเพลง', error);
+            });
+        });
+    </script>
+</body>
+</html>

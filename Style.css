@@ -1,0 +1,52 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #ff7eb3, #ff758c);
+    color: white;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    font-size: 3rem;
+}
+p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* เพิ่ม CSS สำหรับย่อขนาดรูป */
+img {
+    width: 300px; /* กำหนดความกว้างที่ต้องการ */
+    height: auto; /* ให้ความสูงปรับตามอัตราส่วน */
+    border-radius: 10px; /* ทำมุมโค้ง */
+}
+
+/* ปุ่มแตะเพื่อเล่นเพลงที่ดูน่ารัก */
+#playButton {
+    background-color: #ff9bb3; /* พื้นหลังสีชมพู */
+    color: white; /* ข้อความสีขาว */
+    padding: 15px 30px; /* ระยะห่างภายใน */
+    font-size: 1.5rem; /* ขนาดตัวอักษร */
+    border-radius: 25px; /* มุมโค้ง */
+    border: 3px solid #ff6584; /* ขอบปุ่มสีชมพูเข้ม */
+    cursor: pointer; /* แสดงมือเมื่อชี้ */
+    transition: all 0.3s ease; /* การเปลี่ยนแปลงที่ราบรื่น */
+}
+
+/* การเปลี่ยนแปลงเมื่อผู้ใช้วางเมาส์เหนือปุ่ม */
+#playButton:hover {
+    background-color: #ff6584; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    border-color: #ff9bb3; /* เปลี่ยนสีขอบเมื่อ hover */
+    transform: scale(1.1); /* ขยายขนาดปุ่ม */
+}
+
+/* การเปลี่ยนแปลงเมื่อผู้ใช้คลิกปุ่ม */
+#playButton:active {
+    background-color: #ff4c6a; /* สีพื้นหลังเมื่อคลิก */
+    border-color: #ff4c6a; /* ขอบปุ่มเมื่อคลิก */
+    transform: scale(0.98); /* ย่อขนาดปุ่มเมื่อคลิก */
+}
